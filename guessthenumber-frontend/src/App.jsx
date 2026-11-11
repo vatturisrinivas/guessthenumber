@@ -2,7 +2,8 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 
-const API = "http://localhost:8080/api/game";
+// const API = "http://localhost:8080/api/game";
+const API = import.meta.env.VITE_API_URL || "http://localhost:8080/api/game";
 
 function App() {
   const [guess, setGuess] = useState("");
