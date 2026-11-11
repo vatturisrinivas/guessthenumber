@@ -7,7 +7,11 @@ import com.gamerinc.guessthenumber.service.GameService;
 
 @RestController
 @RequestMapping("/api/game")
-@CrossOrigin(origins = "http://localhost:5173")
+//@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+	    "http://localhost:5173",
+	    "https://guess-the-number-delta-dun.vercel.app"
+	})
 public class GameController {
 
     private final GameService gameService;
